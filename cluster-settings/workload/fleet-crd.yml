@@ -1,0 +1,17 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: fleet-crd
+  namespace: cattle-fleet-system
+spec:
+  repo: https://github.com/rancher/fleet-crd-distribution
+  branch: main
+  targets:
+    - name: workload-clusters
+      clusterGroup: workloads
+  # Target specific paths in the repository
+  paths:
+  - crds
+  # Ensure CRDs are applied first
+  targetNamespace: cattle-fleet-system
+  serviceAccount: fleet-crd-deployer
