@@ -6,4 +6,7 @@ metadata:
 
 spec:
   repo: https://github.com/solufit/fleet
-  path: infrastructure
+  paths:
+  - fleet-crd/fleet-crd.yaml
+  - fleet-crd/fleet-controller.yaml
+  - infrastructure
