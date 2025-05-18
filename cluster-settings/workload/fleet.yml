@@ -1,5 +1,2 @@
 targets:
-  - name: infrastructure
-    clusterSelector:
-      matchLabels:
-        env: fleet-default
+  namespace: fleet-default
