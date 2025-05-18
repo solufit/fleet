@@ -1,2 +1,1 @@
-targets:
-  namespace: fleet-default
+namespace: fleet-default
