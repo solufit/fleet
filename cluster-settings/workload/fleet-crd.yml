@@ -1,17 +1,11 @@
-kind: GitRepo
-apiVersion: fleet.cattle.io/v1alpha1
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
 metadata:
   name: fleet-crd
-  namespace: cattle-fleet-system
+  namespace: fleet-default
 spec:
-  repo: https://github.com/rancher/fleet-crd-distribution
-  branch: main
-  targets:
-    - name: workload-clusters
-      clusterGroup: workloads
-  # Target specific paths in the repository
-  paths:
-  - crds
-  # Ensure CRDs are applied first
-  targetNamespace: cattle-fleet-system
-  serviceAccount: fleet-crd-deployer
+  chart: fleet/fleet-crd
+  targetNamespace: cattle-crd
+  createNamespace: true
+  version: latest
+  repo: https://rancher.github.io/fleet-helm-charts/
