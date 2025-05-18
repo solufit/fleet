@@ -6,5 +6,6 @@ metadata:
 
 spec:
   repo: https://github.com/solufit/fleet
+  branch: main
   paths:
   - infrastructure
