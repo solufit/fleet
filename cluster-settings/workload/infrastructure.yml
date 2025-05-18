@@ -10,6 +10,5 @@ spec:
   paths:
   - infrastructure
   targets:
-  - clusterSelector: {}
-  # Selector ignored
-  - clusterSelector: null
+    - name: default
+      clusterGroup: workloads
