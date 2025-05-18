@@ -1,0 +1,36 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  chart: cert-manager
+  repo: https://charts.jetstack.io
+  targetNamespace: cert-manager
+  version: v1.17.2
+  set:
+    installCRDs: "true"
+  valuesContent: |-
+    # Cert-Managerの構成設定
+    global:
+      leaderElection:
+        namespace: cert-manager
+    
+    # イメージプルポリシーの設定
+    image:
+      pullPolicy: IfNotPresent
+    
+    # リソース設定
+    resources:
+      requests:
+        cpu: 10m
+        memory: 32Mi
+      limits:
+        cpu: 100m
+        memory: 128Mi
+    
+    # プローブ設定
+    livenessProbe:
+      enabled: true
+    readinessProbe:
+      enabled: true
