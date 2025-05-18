@@ -5,7 +5,7 @@ metadata:
   namespace: fleet-default
 spec:
   chart: fleet/fleet-crd
-  targetNamespace: cattle-crd
+  targetNamespace: fleet-default
   createNamespace: true
   version: latest
   repo: https://rancher.github.io/fleet-helm-charts/
