@@ -2,7 +2,7 @@ kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: infrastructure
-  namespace: cattle-fleet-system
+  namespace: fleet-default
 
 spec:
   repo: https://github.com/solufit/fleet
