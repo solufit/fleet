@@ -1,12 +1,10 @@
-#kind: GitRepo
-#apiVersion: fleet.cattle.io/v1alpha1
-#metadata:
-#  name: infrastructure
-#  namespace: cattle-fleet-system
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: infrastructure
+  namespace: cattle-fleet-system
 
-#spec:
-#  repo: https://github.com/solufit/fleet
-#  paths:
-#  - fleet-crd/fleet-crd.yaml
-#  - fleet-crd/fleet-controller.yaml
-#  - infrastructure
+spec:
+  repo: https://github.com/solufit/fleet
+  paths:
+  - infrastructure
