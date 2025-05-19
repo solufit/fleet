@@ -1,0 +1,27 @@
+# Metrics Server Fleet manifest
+# This manifest will deploy the Kubernetes Metrics Server using Helm
+
+# Default namespace for the metrics-server
+defaultNamespace: kube-system
+
+# Helm chart configuration
+helm:
+  # Chart reference
+  chart: metrics-server/metrics-server
+  # Chart version
+  version: 3.12.2
+  # Repository configuration
+  repo: https://kubernetes-sigs.github.io/metrics-server/
+  # Release name
+  releaseName: metrics-server
+  # Values to customize the metrics-server installation
+  values:
+    # Additional configuration can be added here based on requirements
+    # For example:
+    resources:
+      limits:
+        cpu: 100m
+        memory: 128Mi
+      requests:
+        cpu: 60m
+        memory: 64Mi
