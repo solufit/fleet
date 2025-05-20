@@ -2,8 +2,6 @@ defaultNamespace: eso
 # リソースセクションを追加してsugoku-testをすべてのターゲットに適用
 resources:
 - sugoku-test.yml
-kustomize:
-  dir: ./kustomize
 helm:
   chart: external-secrets
   repo: https://charts.external-secrets.io
