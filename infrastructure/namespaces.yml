@@ -4,10 +4,10 @@ metadata:
   name: eso
   labels:
     name: eso
-# ---
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: cft
-#   labels:
-#     name: cft
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cft
+  labels:
+    name: cft
