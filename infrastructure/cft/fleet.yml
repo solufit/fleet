@@ -7,10 +7,6 @@ helm:
   version: 0.0.18
   
   values:
-    cloudflare:
-      accountId: ""
-      tunnelName: ""
-      apiToken: ""
     # Default values for cloudflare-tunnel-ingress-controller. This is a YAML-formatted file. Declare variables to be passed into your templates. cloudflare: accountId: "" tunnelName: "" apiToken: ""
     #Uncomment if you would like to use an existing secret instead of the creating a new one.
     secretRef:
