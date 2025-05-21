@@ -1,4 +1,6 @@
 defaultNamespace: cft
+dependsOn:
+  - name: infrastructure-infrastructure-cft-config
 helm:
   chart: cloudflare-tunnel-ingress-controller
   repo: https://helm.strrl.dev

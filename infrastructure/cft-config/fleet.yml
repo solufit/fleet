@@ -1,0 +1,3 @@
+defaultNamespace: cft
+dependsOn:
+  - name: infrastructure-infrastructure-eso-config
